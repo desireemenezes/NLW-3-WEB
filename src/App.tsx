@@ -1,7 +1,12 @@
 import React from 'react';
-// componente - todo componente eretorna uma função HTML "JSX"
+import './styles/global.css';
 
-interface TitleProps {
+import Routes from './routes'
+
+
+// componente - todo componente eretorna uma funï¿½ï¿½o HTML "JSX"
+
+/* interface TitleProps {
   text: string;
 }
 
@@ -10,14 +15,11 @@ function Title (props : TitleProps) {
   <h1>{props.text}</h1> 
   )
   
-}
+} */
+
 function App() {
   return (
-    <div className="App">
-      <Title text="Titulo 1" />
-      <Title text="Titulo 2" />
-      <Title text="Titulo 3" />
-    </div>
+    <Routes />
   );
 }
 
