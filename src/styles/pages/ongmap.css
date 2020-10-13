@@ -1,0 +1,56 @@
+#page-map {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+#page-map aside {
+    width: 440px;
+    background: linear-gradient(329.54deg, #3b3759 0%, #aa5377 100%);
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page-map aside h2 {
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 800;
+    margin-top: 64px;
+}
+
+#page-map aside h2 {
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+#page-map aside footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+}
+
+#page-map aside strong {
+    font-weight: 800;
+}
+
+#page-map .create-ong {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    background: #96feff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: backgroung-color 0.2s;
+
+}
+
+#page-map .create-ong:hover {
+    background: #17d6eb;
+}
