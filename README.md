@@ -10,7 +10,7 @@ Para começar a preparar você para essa semana incrível de muito conteúdo e a
 
 ## Preparando o ambiente
 
-Sem mais delongas, vamos ao conteúdo principal desse guia: configuração do seu ambiente para o NLW. Teremos quatro etapas principais na seção "**Instalação"**:
+Sem mais delongas, vamos ao conteúdo principal desse guia: configuração do seu ambiente para o NLW. Teremos quatro etapas principais na seção "**Instalação"**: 
 
 - Node + NPM;
 - Yarn;
