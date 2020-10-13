@@ -6,7 +6,7 @@ import { Map, TileLayer } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
-import '../styles/pages/ongmap.css';
+import '../styles/pages/ongmap.css'; 
 
 
 function OngMap () {
