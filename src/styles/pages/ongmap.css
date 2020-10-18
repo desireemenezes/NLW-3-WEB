@@ -7,11 +7,20 @@
 
 #page-map aside {
     width: 440px;
-    background: linear-gradient(329.54deg, #3b3759 0%, #aa5377 100%);
+    background: linear-gradient(329.54deg, #283d3b 0%, #0f4c5c 100%);
     padding: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+#page-map aside h1 {
+    margin-top: 7px;
+}
+
+#page-map aside p {
+    margin-top: 7px;
 }
 
 #page-map aside h2 {
@@ -36,6 +45,11 @@
     font-weight: 800;
 }
 
+#page-map .map-color {
+    width: 74px;
+    height: 70px;
+}
+
 #page-map .create-ong {
     position: absolute;
     right: 40px;
@@ -44,7 +58,7 @@
     height: 64px;
     border-radius: 20px;
     z-index: 999;
-    background: linear-gradient(329.54deg, #3b3759 0%, #aa5377 100%);
+    background: linear-gradient(329.54deg, #96feff 0%, #2a9d8f 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +67,7 @@
 }
 
 #page-map .create-ong:hover {
-    background: linear-gradient(329.54deg, #aa5377 30%, #3b3759 70%);
+    background: linear-gradient(329.54deg, #2a9d8f 0%, #96feff 100%);
 }
 
 #page-map .map-popup .leaflet-popup-content-wrapper {
@@ -69,15 +83,19 @@
     display: flex;
     justify-content: center;
     align-items: center;  
+    min-height: 40px;
 }
 
 #page-map .map-popup .leaflet-popup-content a {
     /* background-image: linear-gradient(to left, violet, indigo, blue, green, orange, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    background: linear-gradient(329.54deg, #3b3759 0%, #aa5377 100%);
+    
+    background: linear-gradient(329.54deg, #96feff 0%, #2a9d8f 100%);
     width: 40px;
     height: 40px;
+    position: absolute;
+    right: 10px;
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -93,7 +111,8 @@
   width: 48px;
   height: 48px;
   border: 0;
-  background: linear-gradient(329.54deg, #3b3759 0%, #aa5377 100%);
+  margin-top: 10px;
+  background: linear-gradient(329.54deg, #96feff 0%, #2a9d8f 100%);
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -103,5 +122,5 @@
 }
 
 #page-map footer button:hover  {
-    background: linear-gradient(329.54deg, #aa5377 30%, #3b3759 70%);
+    background: linear-gradient(329.54deg, #2a9d8f 0%, #96feff 100%);
 }

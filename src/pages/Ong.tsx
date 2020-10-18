@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook} from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+
 
 import happyMapIcon from '../utils/mapIcons'
 import '../styles/pages/orphanage.css';
@@ -13,12 +14,14 @@ import api from '../services/api';
 
 interface Orphanage {
 	name: string;
-  latitude: number;
-  longitude: number;
+	latitude: number;
+	longitude: number;
 	about: string;
 	instructions: string;
 	opening_hours: string;
 	open_on_weekends:boolean;
+	whats_app: string;
+	facebook: string;
 	images: Array<{
 		id: number;
 		url: string;
@@ -109,15 +112,15 @@ export default function Orphanage() {
 
 						<hr />
 
-						<h2>Instruções para visita</h2>
+						<h2>InstruÃ§Ãµes para visita</h2>
 						<p>
-							{orphanage.instructions}
+							{orphanage.instructions}Ãµ
 						</p>
 
 						<div className='open-details'>
 							<div className='hour'>
 								<FiClock size={32} color='#15B6D6' />
-								Segunda à Sexta <br />
+								Segunda Ã¡ Sexta <br />
 								{orphanage.opening_hours}
 							</div>
 							{
@@ -130,17 +133,31 @@ export default function Orphanage() {
 									) : (
 										<div className='open-on-weekends dont-open'>
 											<FiInfo size={32} color='#FF6690' />
-											Não atendemos <br />
+											NÃ£o atendemos <br />
 											fim de semana
 										</div>
 									)
 							}
 						</div>
-
-{/* 						<button type='button' className='contact-button'>
+{						orphanage.whats_app ? (
+						<a href={`https://wa.me/${orphanage.whats_app}`}  target="_blank" className="style" rel='noopener noreferrer'>
+						<button type='button' className='contact-button'>
 							<FaWhatsapp size={20} color='#FFF' />
-							Entrar em contato
-						</button> */}
+							WhatsApp
+						</button>
+						</a> ) : (
+							''
+						)}
+
+{						orphanage.facebook ? (
+						<a href={`${orphanage.facebook }`} target="_blank" className="style" rel='noopener noreferrer'>
+						<button type='button' className='contact-button-face'>
+							<FaFacebook size={20} color='#FFF' />
+							Facebook
+						</button>
+						</a> ) : (
+							''
+						)}
 					</div>
 				</div>
 			</main>

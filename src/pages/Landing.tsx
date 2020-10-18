@@ -4,7 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 import '../styles/pages/landing.css';
-import logoImg from '../images/logo.svg';
+import logoImg from '../images/map.svg';
 
 
 function Landing () {
@@ -12,7 +12,7 @@ function Landing () {
         <div id="page-landing">
       <div className="content-wrapper">
         <div className="logo">
-            <img src={logoImg} alt="Happy"/> Undercover
+            <img src={logoImg} alt="Happy" className="map-color"/> Undercover
         </div>
       
           <main>

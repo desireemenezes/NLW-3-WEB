@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiPlus, FiArrowDownRight, FiArrowLeft } from 'react-icons/fi'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
-import mapFlag from '../images/flag.svg';
+import mapFlag from '../images/map.svg';
 import mapMarkerImg from '../images/map.svg';
 
 import { useHistory } from 'react-router-dom';
@@ -46,9 +46,9 @@ function OngMap () {
       <div id="page-map">
           <aside>
               <header>
-                  <img src={mapMarkerImg} alt="Mappy"></img>
+                  <img src={mapMarkerImg} alt="Mappy" className="map-color"></img>
 
-                  <h1>Escolha a Ong no Mapa</h1>
+                  <h1>Escolha a Ong no Mapa!</h1>
                   <p>Conheça as ações socias, projetos e como colaboar com o crescimento da ong :)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </p>
           
               </header>

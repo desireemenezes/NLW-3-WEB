@@ -26,6 +26,8 @@ export default function CreateOrphanage() {
 	const [instructions, setInstructions] = useState("");
 	const [opening_hours, setOpeningHours] = useState("");
 	const [open_on_weekends, setOpenOnWeekends] = useState(true);
+	const [whats_app, setWhats] = useState("");
+	const [facebook, setFacebook] = useState("");
 	const [images, setImages] = useState<File[]>([]);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
@@ -62,7 +64,10 @@ export default function CreateOrphanage() {
     data.append('about', about);
     data.append('instructions', instructions);
     data.append('opening_hours', opening_hours);
-    data.append('open_on_weekends', String(open_on_weekends));
+	data.append('open_on_weekends', String(open_on_weekends));
+	data.append('whats_app', String(whats_app));	
+	data.append('facebook', String(facebook));
+
     images.forEach(image => {
       data.append('images', image);
 		})
@@ -113,7 +118,7 @@ export default function CreateOrphanage() {
 
 						<div className='input-block'>
 							<label htmlFor='about'>
-								Sobre <span>Máximo de 300 caracteres</span>
+								Sobre:
 							</label>
 							<textarea
 								id='name'
@@ -127,27 +132,29 @@ export default function CreateOrphanage() {
 							<label htmlFor='images'>Fotos</label>
 							<div className='images-container'>
 								{previewImages.map((image) => {
-                  return <img key={image} src={image} alt={name} />;
-                })}
+									return <img key={image} src={image} alt={name} />;
+									})}
 								<label htmlFor="images[]" className='new-image'>
 									<FiPlus size={24} color='#15b6d6' />
 								</label>
-							</div>
-							<input
+							<input className="input-none"
 									multiple
 									onChange={handleSelectImages}
 									type="file"
 									id="images[]"
-              />
+             				 />
+							</div>
 						</div>
+
+					
 
 					</fieldset>
 
 					<fieldset>
-						<legend>Visitação</legend>
+						<legend>VisitaÃ§Ã£o</legend>
 
 						<div className='input-block'>
-							<label htmlFor='instructions'>Instruções</label>
+							<label htmlFor='instructions'>InstruÃ§Ãµes</label>
 							<textarea
 								id='instructions'
 								value={instructions}
@@ -156,11 +163,29 @@ export default function CreateOrphanage() {
 						</div>
 
 						<div className='input-block'>
-							<label htmlFor='opening_hours'>Horário de funcionamento</label>
+							<label htmlFor='opening_hours'>HorÃ¡rio de funcionamento</label>
 							<input
 								id='opening_hours'
 								value={opening_hours}
 								onChange={(event) => setOpeningHours(event.target.value)}
+							/>
+						</div>
+
+						<div className='input-block'>
+							<label htmlFor='whats_app'>WhatsApp</label>
+							<input
+								id='whats_app'
+								value={whats_app}
+								onChange={(event) => setWhats(event.target.value)}
+							/>
+						</div>
+
+						<div className='input-block'>
+							<label htmlFor='facebook'>Facebook</label>
+							<input
+								id='facebook'
+								value={facebook}
+								onChange={(event) => setFacebook(event.target.value)}
 							/>
 						</div>
 
@@ -180,7 +205,7 @@ export default function CreateOrphanage() {
 									className={!open_on_weekends ? "active" : ""}
 									onClick={() => setOpenOnWeekends(false)}
 								>
-									Não
+									NÃ£o
 								</button>
 							</div>
 						</div>
